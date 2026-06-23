@@ -1,12 +1,52 @@
 {
-  "appName": "StupidKid",
-  "version": "1.0.0",
-  "privacyVersion": "1.0",
-  "privacyUrl": "https://stiles.github.io/your-repo/privacy.html",
-  "contactEmail": "contact@stiles.cc",
-  "featureSwitch": {
-    "aiVoice": true,
-    "cloudSync": false
+  "appInfo": {
+    "appName": "StupidKid",
+    "copyright": "© 2026 StupidKid Team",
+    "legalLastUpdated": "2026 年 6 月"
   },
-  "disclaimer": "本软件仅作个人工具使用，不收集敏感隐私数据",
+  "contact": {
+    "feedbackEmail": "stilesting@gmail.com",
+    "feedbackSubject": "StupidKid 反馈",
+    "feedbackMailURL": "mailto:stilesting@gmail.com?subject=StupidKid 反馈",
+    "appStoreID": "id0000000000",
+    "appStoreReviewURL": "https://apps.apple.com/app/stupidkid/id0000000000?action=write-review",
+    "githubURL": "https://github.com/stilesTech",
+    "xURL": "https://x.com/tiingou",
+    "blogURL": "http://stiles.cc"
+  },
+  "retentionConfig": {
+    "defaultRetentionDays": 30,
+    "retentionMinDays": 7,
+    "retentionMaxDays": 1095,
+    "retentionPresets": [7, 14, 30, 60, 90, 180, 365, 730, 1095]
+  },
+  "defaultSubscription": {
+    "defaultSubscriptionNames": [
+      "机核",
+      "少数派",
+      "虎嗅",
+      "IT之家"
+    ]
+  },
+  "defaultAgent": {
+    "enableDefaultAgent": true,
+    "defaultAgentName": "默认助手",
+    "defaultAgentPrompt": "你是一个友好、专业的 AI 助手，请用清晰、有条理的方式回答用户的问题。",
+    "defaultAgentTag": "通用",
+    "defaultAgentProvider": "bailian",
+    "defaultAgentAPIKey": "sk-ws-H.RYMLRDE.ThKU.MEYCIQDrUYwu5eBu9X2NnSRQoKyg45rdi-cf3ocRsIqZVV8W5wIhAOCWnDxgm-xzYd0YC99Ai6yloeTXkGQ3JivgM6GEgn_k",
+    "defaultAgentModels": [
+      "qwen3.7-plus",
+      "qwen-max",
+      "qwen3.6-plus",
+      "qwen3.6-flash",
+      "qwen-long",
+      "glm-5",
+      "qwen-plus-2025-07-28"
+    ]
+  },
+  "legalDoc": {
+    "termsOfService": "StupidKid 服务条款\n\n欢迎使用 StupidKid（以下简称\"本应用\"）。使用本应用即表示您同意以下条款：\n\n1. 服务说明\nStupidKid 是一款 AI 驱动的个人知识管理与内容创作工具，提供 RSS 订阅阅读、AI 对话、内容发布等功能。\n\n2. 用户责任\n- 您应确保使用本应用时遵守当地法律法规\n- 您应对通过本应用发布的内容承担全部责任\n- 不得利用本应用进行任何违法或侵权行为\n\n3. 数据使用\n- 订阅内容存储在您的设备本地\n- AI 对话数据通过您配置的 AI 服务提供商处理\n- 我们不会收集或存储您的个人数据\n\n4. 免责声明\n- 本应用按\"现状\"提供，不保证服务不会中断或完全准确\n- AI 生成的内容仅供参考，不构成专业建议\n- 我们不对外部链接或第三方服务的内容负责\n\n5. 条款变更\n我们保留随时修改这些条款的权利，修改后的条款将在应用内公布。",
+    "privacyPolicy": "StupidKid 隐私政策\n\n我们重视您的隐私。本政策说明了我们如何处理您的信息：\n\n1. 数据收集\nStupidKid 不主动收集任何个人身份信息。所有数据均存储在您的设备本地，包括：\n- 订阅源配置和文章内容\n- AI 对话历史和消息记录\n- 应用设置和偏好\n\n2. 第三方服务\n当您使用以下功能时，数据可能会发送到第三方：\n- AI 对话：消息发送到您配置的 AI 服务提供商（如 OpenAI、Anthropic 等）\n- RSS 订阅：通过 RSSHub 实例获取订阅内容\n- 发布功能：内容通过系统分享功能发送到目标应用\n\n3. 数据安全\n- 所有数据加密存储在您的设备上\n- 我们不会访问、出售或共享您的数据\n- 您可以随时在应用内清除所有数据\n\n4. CloudKit 同步\n如果您启用了 iCloud 同步，数据将按照 Apple 的隐私政策进行处理。\n\n5. 联系我们\n如有隐私相关问题，请通过应用内反馈联系我们。"
+  }
 }
