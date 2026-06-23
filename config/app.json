@@ -1,0 +1,12 @@
+{
+  "appName": "StupidKid",
+  "version": "1.0.0",
+  "privacyVersion": "1.0",
+  "privacyUrl": "https://stiles.github.io/your-repo/privacy.html",
+  "contactEmail": "contact@stiles.cc",
+  "featureSwitch": {
+    "aiVoice": true,
+    "cloudSync": false
+  },
+  "disclaimer": "本软件仅作个人工具使用，不收集敏感隐私数据",
+}
