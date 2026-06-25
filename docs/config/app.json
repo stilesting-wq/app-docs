@@ -1,15 +1,15 @@
 {
   "appInfo": {
-    "appName": "StupidKid",
-    "copyright": "© 2026 StupidKid Team",
+    "appName": "Swiftfeed",
+    "copyright": "© 2026 Swiftfeed Team",
     "legalLastUpdated": "2026 年 6 月"
   },
   "contact": {
     "feedbackEmail": "stilesting@gmail.com",
-    "feedbackSubject": "StupidKid 反馈",
-    "feedbackMailURL": "mailto:stilesting@gmail.com?subject=StupidKid 反馈",
+    "feedbackSubject": "Swiftfeed 反馈",
+    "feedbackMailURL": "mailto:stilesting@gmail.com?subject=Swiftfeed 反馈",
     "appStoreID": "id0000000000",
-    "appStoreReviewURL": "https://apps.apple.com/app/stupidkid/id0000000000?action=write-review",
+    "appStoreReviewURL": "https://apps.apple.com/app/Swiftfeed/id0000000000?action=write-review",
     "githubURL": "https://github.com/stilesTech",
     "xURL": "https://x.com/tiingou",
     "blogURL": "http://stiles.cc"
@@ -46,7 +46,7 @@
     ]
   },
   "legalDoc": {
-    "termsOfService": "StupidKid 服务条款\n\n欢迎使用 StupidKid（以下简称\"本应用\"）。使用本应用即表示您同意以下条款：\n\n1. 服务说明\nStupidKid 是一款 AI 驱动的个人知识管理与内容创作工具，提供 RSS 订阅阅读、AI 对话、内容发布等功能。\n\n2. 用户责任\n- 您应确保使用本应用时遵守当地法律法规\n- 您应对通过本应用发布的内容承担全部责任\n- 不得利用本应用进行任何违法或侵权行为\n\n3. 数据使用\n- 订阅内容存储在您的设备本地\n- AI 对话数据通过您配置的 AI 服务提供商处理\n- 我们不会收集或存储您的个人数据\n\n4. 免责声明\n- 本应用按\"现状\"提供，不保证服务不会中断或完全准确\n- AI 生成的内容仅供参考，不构成专业建议\n- 我们不对外部链接或第三方服务的内容负责\n\n5. 条款变更\n我们保留随时修改这些条款的权利，修改后的条款将在应用内公布。",
-    "privacyPolicy": "StupidKid 隐私政策\n\n我们重视您的隐私。本政策说明了我们如何处理您的信息：\n\n1. 数据收集\nStupidKid 不主动收集任何个人身份信息。所有数据均存储在您的设备本地，包括：\n- 订阅源配置和文章内容\n- AI 对话历史和消息记录\n- 应用设置和偏好\n\n2. 第三方服务\n当您使用以下功能时，数据可能会发送到第三方：\n- AI 对话：消息发送到您配置的 AI 服务提供商（如 OpenAI、Anthropic 等）\n- RSS 订阅：通过 RSSHub 实例获取订阅内容\n- 发布功能：内容通过系统分享功能发送到目标应用\n\n3. 数据安全\n- 所有数据加密存储在您的设备上\n- 我们不会访问、出售或共享您的数据\n- 您可以随时在应用内清除所有数据\n\n4. CloudKit 同步\n如果您启用了 iCloud 同步，数据将按照 Apple 的隐私政策进行处理。\n\n5. 联系我们\n如有隐私相关问题，请通过应用内反馈联系我们。"
+    "termsOfService": "Swiftfeed 服务条款\n\n欢迎使用 Swiftfeed（以下简称\"本应用\"）。使用本应用即表示您同意以下条款：\n\n1. 服务说明\nSwiftfeed 是一款 AI 驱动的个人知识管理与内容创作工具，提供 RSS 订阅阅读、AI 对话、内容发布等功能。\n\n2. 用户责任\n- 您应确保使用本应用时遵守当地法律法规\n- 您应对通过本应用发布的内容承担全部责任\n- 不得利用本应用进行任何违法或侵权行为\n\n3. 数据使用\n- 订阅内容存储在您的设备本地\n- AI 对话数据通过您配置的 AI 服务提供商处理\n- 我们不会收集或存储您的个人数据\n\n4. 免责声明\n- 本应用按\"现状\"提供，不保证服务不会中断或完全准确\n- AI 生成的内容仅供参考，不构成专业建议\n- 我们不对外部链接或第三方服务的内容负责\n\n5. 条款变更\n我们保留随时修改这些条款的权利，修改后的条款将在应用内公布。",
+    "privacyPolicy": "Swiftfeed 隐私政策\n\n我们重视您的隐私。本政策说明了我们如何处理您的信息：\n\n1. 数据收集\nSwiftfeed 不主动收集任何个人身份信息。所有数据均存储在您的设备本地，包括：\n- 订阅源配置和文章内容\n- AI 对话历史和消息记录\n- 应用设置和偏好\n\n2. 第三方服务\n当您使用以下功能时，数据可能会发送到第三方：\n- AI 对话：消息发送到您配置的 AI 服务提供商（如 OpenAI、Anthropic 等）\n- RSS 订阅：通过 RSSHub 实例获取订阅内容\n- 发布功能：内容通过系统分享功能发送到目标应用\n\n3. 数据安全\n- 所有数据加密存储在您的设备上\n- 我们不会访问、出售或共享您的数据\n- 您可以随时在应用内清除所有数据\n\n4. CloudKit 同步\n如果您启用了 iCloud 同步，数据将按照 Apple 的隐私政策进行处理。\n\n5. 联系我们\n如有隐私相关问题，请通过应用内反馈联系我们。"
   }
 }
