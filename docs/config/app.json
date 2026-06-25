@@ -30,7 +30,7 @@
   },
   "defaultAgent": {
     "enableDefaultAgent": true,
-    "defaultAgentName": "默认助手",
+    "defaultAgentName": "系统默认助手",
     "defaultAgentPrompt": "你是一个友好、专业的 AI 助手，请用清晰、有条理的方式回答用户的问题。",
     "defaultAgentTag": "通用",
     "defaultAgentProvider": "bailian",
