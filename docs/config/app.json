@@ -68,6 +68,9 @@
       "needsRSSHub": false
     }
   ],
+  "defaultAgent": {
+    "enableDefaultAgent": true
+  },
   "legalDoc": {
     "termsOfService": null,
     "privacyPolicy": null
