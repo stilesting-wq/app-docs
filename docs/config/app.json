@@ -53,13 +53,21 @@
       "needsRSSHub": false
     },
     {
-      "name": "Stiles2",
+      "name": "酷壳",
+      "description": "CoolShell.cn 享受编程和技术所带来的快乐",
+      "rssUrl": "https://coolshell.cn/feed",
+      "groupName": "推荐",
+      "iconName": "s.circle.fill",
+      "needsRSSHub": false
+    },
+    {
+      "name": "Stiles",
       "description": "Stiles 的个人技术博客",
       "rssUrl": "https://www.stiles.cc/feed.xml",
       "groupName": "推荐",
       "iconName": "s.circle.fill",
       "needsRSSHub": false
-    }
+    },
   ],
   "legalDoc": {
     "termsOfService": null,
