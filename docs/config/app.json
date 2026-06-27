@@ -43,6 +43,24 @@
     ],
     "defaultAgentDailyCallLimit": 100
   },
+  "recommendedSources": [
+    {
+      "name": "阮一峰的网络日志",
+      "description": "科技周刊、技术分享",
+      "rssUrl": "https://www.ruanyifeng.com/blog/atom.xml",
+      "groupName": "推荐",
+      "iconName": "r.circle.fill",
+      "needsRSSHub": false
+    },
+    {
+      "name": "Stiles2",
+      "description": "Stiles 的个人技术博客",
+      "rssUrl": "https://www.stiles.cc/feed.xml",
+      "groupName": "推荐",
+      "iconName": "s.circle.fill",
+      "needsRSSHub": false
+    }
+  ],
   "legalDoc": {
     "termsOfService": null,
     "privacyPolicy": null
