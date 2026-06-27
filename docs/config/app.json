@@ -42,6 +42,7 @@
     ],
     "defaultAgentDailyCallLimit": 100
   },
+  "enableRemoteRecommendedSources": false,
   "recommendedSources": [
     
   ],
