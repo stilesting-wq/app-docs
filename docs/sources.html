@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>订览 / Swiftfeed - 推荐订阅源</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", "PingFang SC", "Microsoft YaHei", sans-serif;
+            background: #f5f5f7;
+            color: #1d1d1f;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+        .hero {
+            background: linear-gradient(135deg, #007aff 0%, #5856d6 100%);
+            color: #fff;
+            text-align: center;
+            padding: 64px 24px 48px;
+        }
+        .hero h1 { font-size: 2.4rem; font-weight: 700; letter-spacing: -0.5px; }
+        .hero p { margin-top: 12px; font-size: 1.1rem; opacity: 0.9; }
+        .hero .badge {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 6px 16px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 20px;
+            font-size: 0.85rem;
+            backdrop-filter: blur(8px);
+        }
+        .container { max-width: 960px; margin: 0 auto; padding: 0 20px; }
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            padding: 32px 0 8px;
+        }
+        .stat-item { text-align: center; }
+        .stat-num { font-size: 2rem; font-weight: 700; color: #007aff; }
+        .stat-label { font-size: 0.85rem; color: #86868b; margin-top: 2px; }
+        .category {
+            margin: 32px 0;
+        }
+        .category-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #d2d2d7;
+        }
+        .category-icon {
+            width: 36px; height: 36px;
+            background: linear-gradient(135deg, #007aff, #5856d6);
+            border-radius: 10px;
+            display: flex; align-items: center; justify-content: center;
+            color: #fff; font-size: 1rem; flex-shrink: 0;
+        }
+        .category-header h2 { font-size: 1.3rem; font-weight: 600; }
+        .category-header .count {
+            margin-left: auto;
+            font-size: 0.8rem;
+            color: #86868b;
+            background: #e8e8ed;
+            padding: 2px 10px;
+            border-radius: 12px;
+        }
+        .source-list {
+            display: grid;
+            gap: 12px;
+        }
+        .source-card {
+            background: #fff;
+            border-radius: 14px;
+            padding: 18px 20px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            transition: transform 0.15s, box-shadow 0.15s;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+        }
+        .source-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+        }
+        .source-icon {
+            width: 44px; height: 44px;
+            border-radius: 12px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.2rem; font-weight: 700; color: #fff;
+            flex-shrink: 0;
+        }
+        .source-info { flex: 1; min-width: 0; }
+        .source-name {
+            font-size: 1rem; font-weight: 600;
+            display: flex; align-items: center; gap: 8px;
+        }
+        .source-desc { font-size: 0.85rem; color: #86868b; margin-top: 2px; }
+        .source-url {
+            font-size: 0.75rem;
+            color: #007aff;
+            margin-top: 4px;
+            word-break: break-all;
+            text-decoration: none;
+        }
+        .source-url:hover { text-decoration: underline; }
+        .tag {
+            display: inline-block;
+            font-size: 0.65rem;
+            padding: 1px 7px;
+            border-radius: 6px;
+            font-weight: 500;
+            vertical-align: middle;
+        }
+        .tag-rss { background: #e3f2fd; color: #1565c0; }
+        .tag-rsshub { background: #fff3e0; color: #e65100; }
+        .footer {
+            text-align: center;
+            padding: 48px 20px 32px;
+            color: #86868b;
+            font-size: 0.8rem;
+            line-height: 1.8;
+        }
+        .footer a { color: #007aff; text-decoration: none; }
+        .footer a:hover { text-decoration: underline; }
+
+        /* Color palette for icons */
+        .bg-blue { background: linear-gradient(135deg, #007aff, #40a0ff); }
+        .bg-orange { background: linear-gradient(135deg, #ff9500, #ffb340); }
+        .bg-green { background: linear-gradient(135deg, #34c759, #5dd67b); }
+        .bg-purple { background: linear-gradient(135deg, #af52de, #c77deb); }
+        .bg-red { background: linear-gradient(135deg, #ff3b30, #ff6961); }
+        .bg-teal { background: linear-gradient(135deg, #5ac8fa, #7dd8fb); }
+        .bg-indigo { background: linear-gradient(135deg, #5856d6, #7a78e3); }
+        .bg-pink { background: linear-gradient(135deg, #ff2d55, #ff5e7e); }
+
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 1.8rem; }
+            .stats { gap: 24px; }
+            .stat-num { font-size: 1.5rem; }
+            .source-card { padding: 14px 16px; gap: 12px; }
+            .source-icon { width: 38px; height: 38px; font-size: 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="hero">
+    <h1>订览 / Swiftfeed</h1>
+    <p>AI 驱动的个人知识管理与内容创作平台</p>
+    <span class="badge">推荐订阅源列表</span>
+</div>
+
+<div class="container">
+    <div class="stats">
+        <div class="stat-item">
+            <div class="stat-num">7</div>
+            <div class="stat-label">分类</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-num">23</div>
+            <div class="stat-label">订阅源</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-num">15</div>
+            <div class="stat-label">直接 RSS</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-num">8</div>
+            <div class="stat-label">RSSHub</div>
+        </div>
+    </div>
+
+    <!-- 科技媒体 -->
+    <div class="category">
+        <div class="category-header">
+            <div class="category-icon">⚡</div>
+            <h2>科技媒体</h2>
+            <span class="count">7 个源</span>
+        </div>
+        <div class="source-list">
+            <div class="source-card">
+                <div class="source-icon bg-blue">S</div>
+                <div class="source-info">
+                    <div class="source-name">少数派 <span class="tag tag-rss">RSS</span></div>
+                    <div class="source-desc">高品质数字消费指南</div>
+                    <a class="source-url" href="https://sspai.com/feed" target="_blank">https://sspai.com/feed</a>
+                </div>
+            </div>
+            <div class="source-card">
+                <div class="source-icon bg-blue">36</div>
+                <div class="source-info">
+                    <div class="source-name">36氪 <span class="tag tag-rss">RSS</span></div>
+                    <div class="source-desc">创业与科技资讯</div>
+                    <a class="source-url" href="https://36kr.com/feed" target="_blank">https://36kr.com/feed</a>
+                </div>
+            </div>
+            <div class="source-card">
+                <div class="source-icon bg-green">A</div>
+                <div class="source-info">
+                    <div class="source-name">爱范儿 <span class="tag tag-rss">RSS</span></div>
+                    <div class="source-desc">科技生活社区</div>
+                    <a class="source-url" href="https://www.ifanr.com/feed" target="_blank">https://www.ifanr.com/feed</a>
+                </div>
+            </div>
+            <div class="source-card">
+                <div class="source-icon bg-indigo">I</div>
+                <div class="source-info">
+                    <div class="source-name">InfoQ <span class="tag tag-rss">RSS</span></div>
+                    <div class="source-desc">开发者技术社区</div>
+                    <a class="source-url" href="https://www.infoq.cn/feed" target="_blank">https://www.infoq.cn/feed</a>
+                </div>
+            </div>
+            <div class="source-card">
+                <div class="source-icon bg-orange">H</div>
+                <div class="source-info">
+                    <div class="source-name">虎嗅 <span class="tag tag-rss">RSS</span></div>
+                    <div class="source-desc">商业财经与科技深度报道</div>
+                    <a class="source-url" href="https://rss.huxiu.com" target="_blank">https://rss.huxiu.com</a>
+                </div>
+            </div>
+            <div class="source-card">
+                <div class="source-icon bg-teal">E</div>
+                <div class="source-info">
+                    <div class="source-name">Ezindie <span class="tag tag-rss">RSS</span></div>
+                    <div class="source-desc">让小产品的独立变现更简单</div>
+                    <a class="source-url" href="https://www.ezindie.com/feed/rss.xml" target="_blank">https://www.ezindie.com/feed/rss.xml</a>
+                </div>
+            </div>
+            <div class="source-card">
+                <div class="source-icon bg-red">IT</div>
+                <div class="source-info">
+                    <div class="source-name">IT之家 <span class="tag tag-rss">RSS</span></div>
+                    <div class="source-desc">国内头部 IT 新闻站，全文输出</div>
+                    <a class="source-url" href="https://www.ithome.com/rss/" target="_blank">https://www.ithome.com/rss/</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 开发者社区 -->
+    <div class="category">
+        <div class="category-header">
+            <div class="category-icon">&lt;/&gt;</div>
+            <h2>开发者社区</h2>
+            <span class="count">8 个源</span>
+        </div>
+        <div class="source-list">
+            <div class="source-card">
+                <div class="source-icon bg-indigo">S</div>
+                <div class="source-info">
+                    <div class="source-name">Stiles <span class="tag tag-rss">RSS</span></div>
+                    <div class="source-desc">Stiles 的个人技术博客</div>
+                    <a class="source-url" href="https://www.stiles.cc/feed.xml" target="_blank">https://www.stiles.cc/feed.xml</a>
+                </div>
+            </div>
+            <div class="source-card">
+                <div class="source-icon bg-purple">R</div>
+                <div class="source-info">
+                    <div class="source-name">阮一峰的网络日志 <span class="tag tag-rss">RSS</span></div>
+                    <a class="source-url" href="https://www.ruanyifeng.com/blog/atom.xml" target="_blank">https://www.ruanyifeng.com/blog/atom.xml</a>
+                </div>
+            </div>
+            <div class="source-card">
+                <div class="source-icon bg-orange">M</div>
+                <div class="source-info">
+                    <div class="source-name">美团技术团队 <span class="tag tag-rss">RSS</span></div>
+                    <div class="source-desc">工程实践与技术分享</div>
+                    <a class="source-url" href="https://tech.meituan.com/feed/" target="_blank">https://tech.meituan.com/feed/</a>
+                </div>
+            </div>
+            <div class="source-card">
+                <div class="source-icon bg-blue">V</div>
+                <div class="source-info">
+                    <div class="source-name">V2EX <span class="tag tag-rss">RSS</span></div>
+                    <div class="source-desc">创意工作者社区</div>
+                    <a class="source-url" href="https://www.v2ex.com/index.xml" target="_blank">https://www.v2ex.com/index.xml</a>
+                </div>
+            </div>
+            <div class="source-card">
+                <div class="source-icon bg-blue">J</div>
+                <div class="source-info">
+                    <div class="source-name">掘金前端 <span class="tag tag-rsshub">RSSHub</span></div>
+                    <div class="source-desc">前端技术文章</div>
+                    <a class="source-url" href="https://rsshub.app/juejin/category/frontend" target="_blank">https://rsshub.app/juejin/category/frontend</a>
+                </div>
+            </div>
+            <div class="source-card">
+                <div class="source-icon bg-blue">J</div>
+                <div class="source-info">
+                    <div class="source-name">掘金后端 <span class="tag tag-rsshub">RSSHub</span></div>
+                    <div class="source-desc">后端技术文章</div>
+                    <a class="source-url" href="https://rsshub.app/juejin/category/backend" target="_blank">https://rsshub.app/juejin/category/backend</a>
+                </div>
+            </div>
+            <div class="source-card">
+                <div class="source-icon bg-purple">AI</div>
+                <div class="source-info">
+                    <div class="source-name">掘金 AI <span class="tag tag-rsshub">RSSHub</span></div>
+                    <div class="source-desc">人工智能与机器学习</div>
+                    <a class="source-url" href="https://rsshub.app/juejin/category/ai" target="_blank">https://rsshub.app/juejin/category/ai</a>
+                </div>
+            </div>
+            <div class="source-card">
+                <div class="source-icon bg-green">B</div>
+                <div class="source-info">
+                    <div class="source-name">博客园 <span class="tag tag-rss">RSS</span></div>
+                    <div class="source-desc">中文技术社区精华文章</div>
+                    <a class="source-url" href="http://feed.cnblogs.com/blog/sitehome/rss" target="_blank">http://feed.cnblogs.com/blog/sitehome/rss</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 新闻阅读 -->
+    <div class="category">
+        <div class="category-header">
+            <div class="category-icon">📰</div>
+            <h2>新闻阅读</h2>
+            <span class="count">5 个源</span>
+        </div>
+        <div class="source-list">
+            <div class="source-card">
+                <div class="source-icon bg-red">P</div>
+                <div class="source-info">
+                    <div class="source-name">澎湃新闻 <span class="tag tag-rsshub">RSSHub</span></div>
+                    <div class="source-desc">专注时政与思想</div>
+                    <a class="source-url" href="https://rsshub.app/thepaper/featured" target="_blank">https://rsshub.app/thepaper/featured</a>
+                </div>
+            </div>
+            <div class="source-card">
+                <div class="source-icon bg-blue">Z</div>
+                <div class="source-info">
+                    <div class="source-name">知乎每日精选 <span class="tag tag-rsshub">RSSHub</span></div>
+                    <div class="source-desc">高质量问答精选</div>
+                    <a class="source-url" href="https://rsshub.app/zhihu/daily" target="_blank">https://rsshub.app/zhihu/daily</a>
+                </div>
+            </div>
+            <div class="source-card">
+                <div class="source-icon bg-red">T</div>
+                <div class="source-info">
+                    <div class="source-name">今日头条 <span class="tag tag-rsshub">RSSHub</span></div>
+                    <div class="source-desc">今日头条热榜新闻</div>
+                    <a class="source-url" href="#" target="_blank">通过 RSSHub 路由获取（路径：toutiao）</a>
+                </div>
+            </div>
+            <div class="source-card">
+                <div class="source-icon bg-blue">J</div>
+                <div class="source-info">
+                    <div class="source-name">界面新闻 <span class="tag tag-rss">RSS</span></div>
+                    <div class="source-desc">面向中产阶级的中文新闻平台</div>
+                    <a class="source-url" href="https://a.jiemian.com/index.php?m=article&a=rss" target="_blank">https://a.jiemian.com/index.php?m=article&a=rss</a>
+                </div>
+            </div>
+            <div class="source-card">
+                <div class="source-icon bg-teal">T</div>
+                <div class="source-info">
+                    <div class="source-name">钛媒体 <span class="tag tag-rss">RSS</span></div>
+                    <div class="source-desc">TMT 行业深度分析</div>
+                    <a class="source-url" href="https://www.tmtpost.com/rss.xml" target="_blank">https://www.tmtpost.com/rss.xml</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 视频内容 -->
+    <div class="category">
+        <div class="category-header">
+            <div class="category-icon">▶</div>
+            <h2>视频内容</h2>
+            <span class="count">2 个源</span>
+        </div>
+        <div class="source-list">
+            <div class="source-card">
+                <div class="source-icon bg-pink">B</div>
+                <div class="source-info">
+                    <div class="source-name">B站 科技区热门 <span class="tag tag-rsshub">RSSHub</span></div>
+                    <div class="source-desc">B站科技区热门视频</div>
+                    <a class="source-url" href="#" target="_blank">通过 RSSHub 路由获取（路径：bilibili/ranking/188）</a>
+                </div>
+            </div>
+            <div class="source-card">
+                <div class="source-icon bg-pink">B</div>
+                <div class="source-info">
+                    <div class="source-name">B站 全站热门 <span class="tag tag-rsshub">RSSHub</span></div>
+                    <div class="source-desc">B站全站综合热门视频</div>
+                    <a class="source-url" href="#" target="_blank">通过 RSSHub 路由获取（路径：bilibili/ranking/0）</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 社交媒体 -->
+    <div class="category">
+        <div class="category-header">
+            <div class="category-icon">👥</div>
+            <h2>社交媒体</h2>
+            <span class="count">1 个源</span>
+        </div>
+        <div class="source-list">
+            <div class="source-card">
+                <div class="source-icon bg-blue">Z</div>
+                <div class="source-info">
+                    <div class="source-name">知乎热榜 <span class="tag tag-rsshub">RSSHub</span></div>
+                    <div class="source-desc">知乎实时热门问题</div>
+                    <a class="source-url" href="#" target="_blank">通过 RSSHub 路由获取（路径：zhihu/hotlist）</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 影视娱乐 -->
+    <div class="category">
+        <div class="category-header">
+            <div class="category-icon">🎬</div>
+            <h2>影视娱乐</h2>
+            <span class="count">2 个源</span>
+        </div>
+        <div class="source-list">
+            <div class="source-card">
+                <div class="source-icon bg-orange">J</div>
+                <div class="source-info">
+                    <div class="source-name">机核 <span class="tag tag-rss">RSS</span></div>
+                    <div class="source-desc">中文游戏文化深度社区</div>
+                    <a class="source-url" href="https://www.gcores.com/rss" target="_blank">https://www.gcores.com/rss</a>
+                </div>
+            </div>
+            <div class="source-card">
+                <div class="source-icon bg-green">D</div>
+                <div class="source-info">
+                    <div class="source-name">豆瓣影评 <span class="tag tag-rss">RSS</span></div>
+                    <div class="source-desc">豆瓣热门影评聚合</div>
+                    <a class="source-url" href="https://www.douban.com/feed/review/movie" target="_blank">https://www.douban.com/feed/review/movie</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 生活文化 -->
+    <div class="category">
+        <div class="category-header">
+            <div class="category-icon">📚</div>
+            <h2>生活文化</h2>
+            <span class="count">2 个源</span>
+        </div>
+        <div class="source-list">
+            <div class="source-card">
+                <div class="source-icon bg-green">D</div>
+                <div class="source-info">
+                    <div class="source-name">豆瓣书评 <span class="tag tag-rss">RSS</span></div>
+                    <div class="source-desc">豆瓣热门书评聚合</div>
+                    <a class="source-url" href="https://www.douban.com/feed/review/book" target="_blank">https://www.douban.com/feed/review/book</a>
+                </div>
+            </div>
+            <div class="source-card">
+                <div class="source-icon bg-green">D</div>
+                <div class="source-info">
+                    <div class="source-name">豆瓣乐评 <span class="tag tag-rss">RSS</span></div>
+                    <div class="source-desc">豆瓣热门乐评聚合</div>
+                    <a class="source-url" href="https://www.douban.com/feed/review/music" target="_blank">https://www.douban.com/feed/review/music</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <p>Copyright &copy; 2026 stilesting. All rights reserved.</p>
+    <p>本应用程序代码、界面、文案版权归开发者所有；通过RSS订阅加载的第三方资讯、AI服务商输出内容版权归属对应原内容方</p>
+    <p style="margin-top: 8px;">
+        <a href="https://stilesting-wq.github.io/app-docs/privacy.html">隐私政策</a>
+    </p>
+</div>
+
+</body>
+</html>
