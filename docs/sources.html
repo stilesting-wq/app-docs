@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>顶览 / Swiftfeed - 订阅源使用指引</title>
+    <title>Swiftfeed - Copyright-Safe RSS Feed Guide</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", "PingFang SC", "Microsoft YaHei", sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", sans-serif;
             background: #f5f5f7;
             color: #1d1d1f;
             line-height: 1.6;
@@ -160,6 +160,8 @@
             vertical-align: middle;
         }
         .tag-rss { background: #e3f2fd; color: #1565c0; }
+        .tag-cc0 { background: #e8f5e9; color: #2e7d32; }
+        .tag-official { background: #fff3e0; color: #ef6c00; }
         .text-guide-block {
             background: #ffffff;
             border-radius: 14px;
@@ -184,6 +186,7 @@
         .bg-green { background: linear-gradient(135deg, #34c759, #5dd67b); }
         .bg-purple { background: linear-gradient(135deg, #af52de, #c77deb); }
         .bg-indigo { background: linear-gradient(135deg, #5856d6, #7a78e3); }
+        .bg-teal { background: linear-gradient(135deg, #5ac8fa, #7dd8fb); }
         @media (max-width: 600px) {
             .hero h1 { font-size: 1.8rem; }
             .stats { gap: 24px; }
@@ -198,93 +201,307 @@
 <body>
 
 <div class="hero">
-    <h1>顶览 / Swiftfeed</h1>
-    <p>AI 驱动的个人知识管理与内容创作工具</p>
-    <span class="badge">订阅源合规使用指引</span>
+    <h1>Swiftfeed</h1>
+    <p>Private Local AI & Reading Tool</p>
+    <span class="badge">Copyright-Safe RSS Feed List</span>
 </div>
 
 <div class="container">
-    <!-- 重要版权风险警示（最顶部） -->
     <div class="tip-bar-danger">
         <span class="tip-icon">⚠️</span>
-        <span>版权重要提示：商业科技媒体、资讯平台、UGC社区原创内容受著作权法严格保护。本页面不提供任何商业媒体RSS订阅地址、爬虫中转链接；仅提供低风险个人技术博客源。如需订阅商业媒体，请自行前往对应官网查找原生RSS入口，仅作个人少量阅读使用，禁止批量抓取、商用分发。</span>
+        <span>Copyright Notice: Commercial news media, entertainment platforms, user-generated content sites retain full copyright over their articles. This page only provides official open-source, CC0 public domain RSS feeds with clear commercial aggregation permission. Commercial media feeds are not listed here; you may locate native RSS entries on official websites for personal reading only.</span>
     </div>
 
     <div class="tip-bar-safe">
         <span class="tip-icon">✅</span>
-        <span>下方列表为低风险订阅源：个人独立技术博客，内容以技术分享为主，极少产生版权纠纷，仅可复制RSS链接手动添加至App。</span>
+        <span>All feeds below are copyright-safe for commercial use: official tech company blogs, CC0 academic preprint archives, open web standards, NASA public science releases. You may copy RSS links and add them manually inside Swiftfeed App.</span>
     </div>
 
     <div class="stats">
-        <div class="stat-item"><div class="stat-num">1</div><div class="stat-label">合规分类</div></div>
-        <div class="stat-item"><div class="stat-num">4</div><div class="stat-label">安全订阅源</div></div>
+        <div class="stat-item"><div class="stat-num">6</div><div class="stat-label">Categories</div></div>
+        <div class="stat-item"><div class="stat-num">24</div><div class="stat-label">Safe RSS Sources</div></div>
     </div>
 
-    <!-- 仅保留安全低风险分类：个人技术博客 -->
+    <!-- AI Official Research Blogs -->
+    <div class="category">
+        <div class="category-header">
+            <div class="category-icon">🤖</div>
+            <h2>AI Official Research Blogs</h2>
+            <span class="count">7 feeds</span>
+        </div>
+        <div class="source-list">
+            <div class="source-card" data-url="https://openai.com/blog/rss.xml" data-name="OpenAI Official Blog">
+                <div class="source-icon bg-teal">O</div>
+                <div class="source-info">
+                    <div class="source-name">OpenAI Official Blog <span class="tag tag-official">Official RSS</span></div>
+                    <div class="source-desc">Official AI research, product & safety announcements</div>
+                    <a class="site-link" href="https://openai.com/blog" target="_blank" rel="noopener">Visit Site →</a>
+                </div>
+            </div>
+            <div class="source-card" data-url="https://deepmind.google/blog/rss.xml" data-name="Google DeepMind Blog">
+                <div class="source-icon bg-blue">D</div>
+                <div class="source-info">
+                    <div class="source-name">Google DeepMind Blog <span class="tag tag-official">Official RSS</span></div>
+                    <div class="source-desc">DeepMind AI research papers & technical breakdowns</div>
+                    <a class="site-link" href="https://deepmind.google/blog" target="_blank" rel="noopener">Visit Site →</a>
+                </div>
+            </div>
+            <div class="source-card" data-url="https://huggingface.co/blog/feed.xml" data-name="Hugging Face Blog">
+                <div class="source-icon bg-purple">H</div>
+                <div class="source-info">
+                    <div class="source-name">Hugging Face Blog <span class="tag tag-official">Official RSS</span></div>
+                    <div class="source-desc">Open-source LLM, transformer & AI deployment guides</div>
+                    <a class="site-link" href="https://huggingface.co/blog" target="_blank" rel="noopener">Visit Site →</a>
+                </div>
+            </div>
+            <div class="source-card" data-url="https://research.google/blog/feed.xml" data-name="Google Research Blog">
+                <div class="source-icon bg-blue">G</div>
+                <div class="source-info">
+                    <div class="source-name">Google Research Blog <span class="tag tag-official">Official RSS</span></div>
+                    <div class="source-desc">Google AI, computer vision & fundamental research papers</div>
+                    <a class="site-link" href="https://research.google/blog" target="_blank" rel="noopener">Visit Site →</a>
+                </div>
+            </div>
+            <div class="source-card" data-url="https://azure.microsoft.com/en-us/blog/ai/feed/" data-name="Microsoft Azure AI Blog">
+                <div class="source-icon bg-teal">M</div>
+                <div class="source-info">
+                    <div class="source-name">Microsoft Azure AI Blog <span class="tag tag-official">Official RSS</span></div>
+                    <div class="source-desc">Copilot, open LLM & cloud artificial intelligence updates</div>
+                    <a class="site-link" href="https://azure.microsoft.com/en-us/blog/ai" target="_blank" rel="noopener">Visit Site →</a>
+                </div>
+            </div>
+            <div class="source-card" data-url="https://www.anthropic.com/blog/feed.xml" data-name="Anthropic Claude Blog">
+                <div class="source-icon bg-purple">A</div>
+                <div class="source-info">
+                    <div class="source-name">Anthropic Claude Blog <span class="tag tag-official">Official RSS</span></div>
+                    <div class="source-desc">Claude large model alignment & AI safety research</div>
+                    <a class="site-link" href="https://www.anthropic.com/blog" target="_blank" rel="noopener">Visit Site →</a>
+                </div>
+            </div>
+            <div class="source-card" data-url="https://software.intel.com/content/www/us/en/develop/blog/feed.html" data-name="Intel Developer Blog">
+                <div class="source-icon bg-orange">I</div>
+                <div class="source-info">
+                    <div class="source-name">Intel Developer Blog <span class="tag tag-official">Official RSS</span></div>
+                    <div class="source-desc">On-device AI, chip & hardware optimization guides</div>
+                    <a class="site-link" href="https://software.intel.com/content/www/us/en/develop/blog/" target="_blank" rel="noopener">Visit Site →</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Open Web & Frontend Standards -->
     <div class="category">
         <div class="category-header">
             <div class="category-icon">&lt;/&gt;</div>
-            <h2>低风险个人技术博客（合规推荐）</h2>
-            <span class="count">4 个源</span>
+            <h2>Open Web & Frontend Standards</h2>
+            <span class="count">3 feeds</span>
         </div>
         <div class="source-list">
-             <div class="source-card" data-url="https://coolshell.cn/feed" data-name="V2EX 社区">
-                <div class="source-icon bg-blue">C</div>
+            <div class="source-card" data-url="https://github.blog/feed.xml" data-name="GitHub Blog">
+                <div class="source-icon bg-indigo">G</div>
                 <div class="source-info">
-                    <div class="source-name">coolshell酷壳<span class="tag tag-rss">原生RSS</span></div>
-                    <div class="source-desc">享受编程和技术所带来的快乐 – Coding Your Ambition</div>
-                    <a class="site-link" href="https://coolshell.cn" target="_blank" rel="noopener">前往站点 →</a>
+                    <div class="source-name">GitHub Blog <span class="tag tag-official">Official RSS</span></div>
+                    <div class="source-desc">Open source development & platform updates</div>
+                    <a class="site-link" href="https://github.blog" target="_blank" rel="noopener">Visit Site →</a>
                 </div>
             </div>
-            <div class="source-card" data-url="https://www.ruanyifeng.com/blog/atom.xml" data-name="阮一峰的网络日志">
-                <div class="source-icon bg-purple">R</div>
-                <div class="source-info">
-                    <div class="source-name">阮一峰的网络日志 <span class="tag tag-rss">原生RSS</span></div>
-                    <div class="source-desc">开源技术、互联网科普文章分享</div>
-                    <a class="site-link" href="https://www.ruanyifeng.com/blog/" target="_blank" rel="noopener">前往站点 →</a>
-                </div>
-            </div>
-            <div class="source-card" data-url="https://tech.meituan.com/feed/" data-name="美团技术团队">
+            <div class="source-card" data-url="https://hacks.mozilla.org/feed/" data-name="Mozilla Hacks">
                 <div class="source-icon bg-orange">M</div>
                 <div class="source-info">
-                    <div class="source-name">美团技术团队 <span class="tag tag-rss">原生RSS</span></div>
-                    <div class="source-desc">后端、客户端工程实践技术干货</div>
-                    <a class="site-link" href="https://tech.meituan.com" target="_blank" rel="noopener">前往站点 →</a>
+                    <div class="source-name">Mozilla Hacks <span class="tag tag-official">Official RSS</span></div>
+                    <div class="source-desc">Web standard, Firefox & frontend technical articles</div>
+                    <a class="site-link" href="https://hacks.mozilla.org" target="_blank" rel="noopener">Visit Site →</a>
                 </div>
             </div>
-            <div class="source-card" data-url="https://www.stiles.cc/feed.xml" data-name="Stiles 个人博客">
-                <div class="source-icon bg-indigo">S</div>
+            <div class="source-card" data-url="https://web.dev/feed.xml" data-name="web.dev by Google">
+                <div class="source-icon bg-green">W</div>
                 <div class="source-info">
-                    <div class="source-name">Stiles 个人博客 <span class="tag tag-rss">原生RSS</span></div>
-                    <div class="source-desc">独立开发者个人技术随笔与实践记录</div>
-                    <a class="site-link" href="https://www.stiles.cc" target="_blank" rel="noopener">前往站点 →</a>
+                    <div class="source-name">web.dev <span class="tag tag-official">Official RSS</span></div>
+                    <div class="source-desc">Modern web performance & frontend best practices</div>
+                    <a class="site-link" href="https://web.dev" target="_blank" rel="noopener">Visit Site →</a>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- 纯文字板块：商业媒体自助查找指引（无任何RSS链接、无复制按钮） -->
+    <!-- CC0 Academic Preprint (Public Domain) -->
+    <div class="category">
+        <div class="category-header">
+            <div class="category-icon">📜</div>
+            <h2>CC0 Academic Preprint (Public Domain)</h2>
+            <span class="count">6 feeds</span>
+        </div>
+        <div class="source-list">
+            <div class="source-card" data-url="https://rss.arxiv.org/rss/cs.AI" data-name="arXiv CS.AI Artificial Intelligence">
+                <div class="source-icon bg-green">A</div>
+                <div class="source-info">
+                    <div class="source-name">arXiv CS.AI <span class="tag tag-cc0">CC0 Public Domain</span></div>
+                    <div class="source-desc">AI & machine learning open research preprints, full CC0 license</div>
+                    <a class="site-link" href="https://arxiv.org/list/cs.AI/recent" target="_blank" rel="noopener">Visit Site →</a>
+                </div>
+            </div>
+            <div class="source-card" data-url="https://rss.arxiv.org/rss/cs.LG" data-name="arXiv CS.LG Machine Learning">
+                <div class="source-icon bg-green">A</div>
+                <div class="source-info">
+                    <div class="source-name">arXiv CS.LG <span class="tag tag-cc0">CC0 Public Domain</span></div>
+                    <div class="source-desc">Machine learning, neural network open academic papers</div>
+                    <a class="site-link" href="https://arxiv.org/list/cs.LG/recent" target="_blank" rel="noopener">Visit Site →</a>
+                </div>
+            </div>
+            <div class="source-card" data-url="https://rss.arxiv.org/rss/cs.CV" data-name="arXiv CS.CV Computer Vision">
+                <div class="source-icon bg-green">A</div>
+                <div class="source-info">
+                    <div class="source-name">arXiv CS.CV Computer Vision <span class="tag tag-cc0">CC0 Public Domain</span></div>
+                    <div class="source-desc">Image recognition, multimodal vision open preprints</div>
+                    <a class="site-link" href="https://arxiv.org/list/cs.CV/recent" target="_blank" rel="noopener">Visit Site →</a>
+                </div>
+            </div>
+            <div class="source-card" data-url="https://rss.arxiv.org/rss/cs.CR" data-name="arXiv CS.CR Cryptography">
+                <div class="source-icon bg-green">A</div>
+                <div class="source-info">
+                    <div class="source-name">arXiv CS.CR Cryptography <span class="tag tag-cc0">CC0 Public Domain</span></div>
+                    <div class="source-desc">Network security, privacy encryption research papers</div>
+                    <a class="site-link" href="https://arxiv.org/list/cs.CR/recent" target="_blank" rel="noopener">Visit Site →</a>
+                </div>
+            </div>
+            <div class="source-card" data-url="https://rss.arxiv.org/rss/cs.RO" data-name="arXiv CS.RO Robotics">
+                <div class="source-icon bg-green">A</div>
+                <div class="source-info">
+                    <div class="source-name">arXiv CS.RO Robotics <span class="tag tag-cc0">CC0 Public Domain</span></div>
+                    <div class="source-desc">Robot control, autonomous agent academic preprints</div>
+                    <a class="site-link" href="https://arxiv.org/list/cs.RO/recent" target="_blank" rel="noopener">Visit Site →</a>
+                </div>
+            </div>
+            <div class="source-card" data-url="https://rss.arxiv.org/rss/stat.ML" data-name="arXiv stat.ML Statistical ML">
+                <div class="source-icon bg-green">A</div>
+                <div class="source-info">
+                    <div class="source-name">arXiv stat.ML <span class="tag tag-cc0">CC0 Public Domain</span></div>
+                    <div class="source-desc">Statistical learning & mathematical modeling papers</div>
+                    <a class="site-link" href="https://arxiv.org/list/stat.ML/recent" target="_blank" rel="noopener">Visit Site →</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Open Developer Community -->
+    <div class="category">
+        <div class="category-header">
+            <div class="category-icon">💻</div>
+            <h2>Open Developer Community</h2>
+            <span class="count">4 feeds</span>
+        </div>
+        <div class="source-list">
+            <div class="source-card" data-url="https://hnrss.org/frontpage" data-name="Hacker News Frontpage">
+                <div class="source-icon bg-orange">HN</div>
+                <div class="source-info">
+                    <div class="source-name">Hacker News Frontpage <span class="tag tag-rss">Official Community Feed</span></div>
+                    <div class="source-desc">Open tech & startup public discussion feed</div>
+                    <a class="site-link" href="https://news.ycombinator.com" target="_blank" rel="noopener">Visit Site →</a>
+                </div>
+            </div>
+            <div class="source-card" data-url="https://hnrss.org/newest?q=AI" data-name="Hacker News AI Feed">
+                <div class="source-icon bg-orange">HN</div>
+                <div class="source-info">
+                    <div class="source-name">Hacker News AI Feed <span class="tag tag-rss">Official Community Feed</span></div>
+                    <div class="source-desc">Filtered AI & large model technical discussions</div>
+                    <a class="site-link" href="https://news.ycombinator.com" target="_blank" rel="noopener">Visit Site →</a>
+                </div>
+            </div>
+            <div class="source-card" data-url="https://www.w3.org/blog/feed/" data-name="W3C Blog">
+                <div class="source-icon bg-blue">W3</div>
+                <div class="source-info">
+                    <div class="source-name">W3C Blog <span class="tag tag-official">Standard Org RSS</span></div>
+                    <div class="source-desc">World Wide Web Consortium web standard updates</div>
+                    <a class="site-link" href="https://www.w3.org/blog" target="_blank" rel="noopener">Visit Site →</a>
+                </div>
+            </div>
+            <div class="source-card" data-url="https://www.kernel.org/feed.xml" data-name="Linux Kernel News">
+                <div class="source-icon bg-green">L</div>
+                <div class="source-info">
+                    <div class="source-name">Linux Kernel News <span class="tag tag-official">Official RSS</span></div>
+                    <div class="source-desc">Linux kernel release & core development updates</div>
+                    <a class="site-link" href="https://www.kernel.org" target="_blank" rel="noopener">Visit Site →</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- US Public Government & Science (Public Domain) -->
+    <div class="category">
+        <div class="category-header">
+            <div class="category-icon">🏛️</div>
+            <h2>US Public Government & Science (Public Domain)</h2>
+            <span class="count">3 feeds</span>
+        </div>
+        <div class="source-list>
+            <div class="source-card" data-url="https://www.nist.gov/blogs/blog.xml" data-name="NIST Official Blog">
+                <div class="source-icon bg-blue">N</div>
+                <div class="source-info">
+                    <div class="source-name">NIST Official Blog <span class="tag tag-cc0">US Public Domain</span></div>
+                    <div class="source-desc">US federal cyber security & AI safety standard documents</div>
+                    <a class="site-link" href="https://www.nist.gov/blogs" target="_blank" rel="noopener">Visit Site →</a>
+                </div>
+            </div>
+            <div class="source-card" data-url="https://www.gdacs.org/xml/rss.xml" data-name="GDACS Global Disaster Alert">
+                <div class="source-icon bg-orange">G</div>
+                <div class="source-info">
+                    <div class="source-name">GDACS Global Disaster Alert <span class="tag tag-cc0">Public Domain</span></div>
+                    <div class="source-desc">Earthquake, flood, volcano real-time global alert data</div>
+                    <a class="site-link" href="https://www.gdacs.org" target="_blank" rel="noopener">Visit Site →</a>
+                </div>
+            </div>
+            <div class="source-card" data-url="https://www.loc.gov/rss/loc-news.xml" data-name="Library of Congress News">
+                <div class="source-icon bg-purple">L</div>
+                <div class="source-info">
+                    <div class="source-name">Library of Congress News <span class="tag tag-cc0">US Public Domain</span></div>
+                    <div class="source-desc">US federal public archive & open cultural resources</div>
+                    <a class="site-link" href="https://www.loc.gov" target="_blank" rel="noopener">Visit Site →</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- NASA Public Science (Public Domain) -->
+    <div class="category">
+        <div class="category-header">
+            <div class="category-icon">🚀</div>
+            <h2>NASA Public Science (Public Domain)</h2>
+            <span class="count">1 feed</span>
+        </div>
+        <div class="source-list">
+            <div class="source-card" data-url="https://www.nasa.gov/rss/dyn/breaking_news.rss" data-name="NASA Breaking News">
+                <div class="source-icon bg-purple">N</div>
+                <div class="source-info">
+                    <div class="source-name">NASA Breaking News <span class="tag tag-cc0">US Public Domain</span></div>
+                    <div class="source-desc">US government public space science news, no copyright restrictions</div>
+                    <a class="site-link" href="https://www.nasa.gov" target="_blank" rel="noopener">Visit Site →</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Third-Party Media Self-Service Guide -->
     <div class="category">
         <div class="category-header">
             <div class="category-icon">📰</div>
-            <h2>商业媒体订阅自助指引（仅文字说明）</h2>
+            <h2>Third-Party Media Self-Service Guide (Text Only)</h2>
         </div>
         <div class="text-guide-block">
-            <h3>如何自行获取商业媒体原生RSS</h3>
-            <p>少数派、36氪、虎嗅、爱范儿、InfoQ、界面新闻、钛媒体等科技媒体均官方开放原生RSS功能。</p>
-            <p>操作方式：使用浏览器打开对应媒体官网，在页面底部导航栏查找「RSS订阅」入口，复制网站原生RSS地址，手动粘贴至顶览App添加页面。</p>
-            <p class="warn-text">法律风险提示：上述平台全部原创报道、专栏内容受著作权保护，仅允许个人学习阅读；禁止批量抓取、缓存全文、对外分享聚合链接。若平台发送下架通知，请立即删除对应订阅源。</p>
-            <p>本页面不提供上述媒体任何RSS地址、中转爬虫链接，不提供一键复制、一键导入功能，所有资源由用户自主前往官网获取。</p>
+            <h3>How to Locate Native RSS Feeds from External Media</h3>
+            <p>Global mainstream tech media (BBC Tech, Reuters Tech, Ars Technica) provide native RSS feeds on their official websites.</p>
+            <p>Workflow: Open media homepage via browser, locate "RSS Feed" entry at page footer, copy raw RSS URL and manually add inside Swiftfeed App.</p>
+            <p class="warn-text">Copyright Warning: All original news articles are fully protected by copyright law. Feeds may only be used for personal learning reading. Do not bulk crawl, store full articles or redistribute aggregated links. Remove corresponding feeds once receiving platform takedown notice.</p>
+            <p>This page does not contain any RSS addresses, crawler proxy links or one-click import buttons for commercial media. All external feeds must be retrieved manually from official sites by end users.</p>
         </div>
     </div>
 </div>
 
 <div class="footer">
     <p>Copyright &copy; 2026 stilesting. All rights reserved.</p>
-    <p>本页面仅提供工具使用指引，仅整理低风险个人博客原生RSS；不整理、不存储商业媒体、UGC平台、第三方爬虫订阅链接。</p>
-    <p>应用软件、界面、文案版权归开发者所有；所有第三方网站资讯、图文、专栏内容版权归属对应原平台与著作权人。用户自行添加外部订阅源产生的一切版权责任由用户自行承担。</p>
+    <p>This page only provides copyright-safe official open-source & CC0 public domain RSS feeds. No commercial media, UGC platform or third-party crawler links are listed here.</p>
+    <p>All software UI, text & script copyright belongs to the developer. All third-party articles, images and content accessed via RSS feeds retain full copyright of original publishers and authors. End users bear all legal liabilities caused by manually adding external third-party feeds.</p>
     <p style="margin-top: 8px;">
-        <a href="https://stilesting-wq.github.io/app-docs/privacy.html">隐私政策</a>
+        <a href="https://stilesting-wq.github.io/app-docs/privacy.html">Privacy Policy</a>
     </p>
 </div>
 
@@ -300,18 +517,17 @@ document.addEventListener('DOMContentLoaded', function() {
         var actions = document.createElement('div');
         actions.className = 'card-actions';
 
-        // 仅保留复制按钮，移除一键导入App功能（降低主动分发属性）
         var copyBtn = document.createElement('button');
         copyBtn.className = 'action-btn btn-copy';
-        copyBtn.innerHTML = svgCopy + ' 复制RSS';
-        copyBtn.title = '复制RSS地址，前往App手动添加';
+        copyBtn.innerHTML = svgCopy + ' Copy RSS';
+        copyBtn.title = 'Copy RSS link, paste manually inside Swiftfeed';
         copyBtn.addEventListener('click', function(e) {
             e.stopPropagation();
             navigator.clipboard.writeText(url).then(function() {
-                copyBtn.innerHTML = svgCheck + ' 已复制';
+                copyBtn.innerHTML = svgCheck + ' Copied';
                 copyBtn.classList.add('copied');
                 setTimeout(function() {
-                    copyBtn.innerHTML = svgCopy + ' 复制RSS';
+                    copyBtn.innerHTML = svgCopy + ' Copy RSS';
                     copyBtn.classList.remove('copied');
                 }, 1500);
             });
