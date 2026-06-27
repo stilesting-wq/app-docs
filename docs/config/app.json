@@ -69,7 +69,7 @@
     }
   ],
   "defaultAgent": {
-    "enableDefaultAgent": true
+    "enableDefaultAgent": false
   },
   "legalDoc": {
     "termsOfService": null,
