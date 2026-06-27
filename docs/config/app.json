@@ -1,12 +1,12 @@
 {
   "appInfo": {
-    "appName": "订览",
+    "appName": "Swiftfeed",
     "copyright": "Copyright © 2026 stilesting. All rights reserved.\n本应用程序代码、界面、文案版权归开发者所有；通过RSS订阅加载的第三方资讯、AI服务商输出内容版权归属对应原内容方",
     "legalLastUpdated": "2026 年 6 月"
   },
   "contact": {
     "feedbackEmail": "stilesting@gmail.com",
-    "feedbackSubject": "订览反馈",
+    "feedbackSubject": "Swiftfeed反馈",
     "appStoreID": "id0000000000",
     "githubURL": "https://github.com/stilesTech",
     "blogURL": "http://stiles.cc"
@@ -43,30 +43,7 @@
     "defaultAgentDailyCallLimit": 100
   },
   "recommendedSources": [
-    {
-      "name": "阮一峰的网络日志",
-      "description": "科技周刊、技术分享",
-      "rssUrl": "https://www.ruanyifeng.com/blog/atom.xml",
-      "groupName": "推荐",
-      "iconName": "r.circle.fill",
-      "needsRSSHub": false
-    },
-    {
-      "name": "酷壳",
-      "description": "CoolShell.cn 享受编程和技术所带来的快乐",
-      "rssUrl": "https://coolshell.cn/feed",
-      "groupName": "推荐",
-      "iconName": "s.circle.fill",
-      "needsRSSHub": false
-    },
-    {
-      "name": "Stiles",
-      "description": "Stiles 的个人技术博客",
-      "rssUrl": "https://www.stiles.cc/feed.xml",
-      "groupName": "推荐",
-      "iconName": "s.circle.fill",
-      "needsRSSHub": false
-    }
+    
   ],
   "defaultAgent": {
     "enableDefaultAgent": false
