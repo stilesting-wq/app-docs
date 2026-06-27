@@ -30,7 +30,7 @@
     "defaultAgentPrompt": "你是一个友好、专业的 AI 助手，请用清晰、有条理的方式回答用户的问题。",
     "defaultAgentTag": "通用",
     "defaultAgentProvider": "bailian",
-    "defaultAgentAPIKey": "sk-ws-H.RYMLRDE.ThKU.MEYCIQDrUYwu5eBu9X2NnSRQoKyg45rdi-cf3ocRsIqZVV8W5wIhAOCWnDxgm-xzYd0YC99Ai6yloeTXkGQ3JivgM6GEgn_k",
+    "defaultAgentAPIKey": "n/cLLRswB6H+qBN7TCEL2vFDicnzHv4patH2xTt/l1NPb9pBYjqIDp3oIgS7f5q7hDO341kSJjXCcSMQJ16WXngv2L93FDjueMZ8isO4viulQsldoay/7VCUhi0BtQZzXNOriaoRd/tP5giE88torITV39RLPVQcbRUj1nblVZ4=",
     "defaultAgentModels": [
       "qwen3.7-plus",
       "qwen-max",
