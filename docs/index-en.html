@@ -3,143 +3,314 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Swiftfeed - AI RSS & Knowledge Manager</title>
+    <title>Swiftfeed - AI RSS & Personal Knowledge Workspace</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
         }
+
         body {
-            background-color: #f5f7fa;
-            color: #222;
+            background: #f8fafc;
+            color: #1e293b;
             line-height: 1.7;
-            padding: 20px 16px;
+            -webkit-font-smoothing: antialiased;
         }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: #ffffff;
-            padding: 32px;
-            border-radius: 16px;
-            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
-        }
-        h1 {
-            font-size: 28px;
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 20px 60px;
             text-align: center;
-            margin-bottom: 8px;
-            color: #1a1a1a;
         }
-        .slogan {
-            text-align: center;
-            color: #666;
-            font-size: 16px;
-            margin-bottom: 32px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid #eee;
+
+        .hero h1 {
+            font-size: 48px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            margin-bottom: 16px;
         }
-        h2 {
+
+        .hero .subtitle {
             font-size: 20px;
-            margin: 28px 0 12px;
-            color: #111;
+            opacity: 0.95;
+            margin-bottom: 32px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
         }
-        p {
-            margin-bottom: 14px;
-            font-size: 15px;
-            color: #333;
+
+        .badges {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 36px;
         }
-        ul {
-            margin: 10px 0 16px 24px;
-        }
-        li {
-            margin-bottom: 10px;
-            font-size: 15px;
-        }
-        .feature-card {
-            background: #fafafa;
-            border-radius: 10px;
-            padding: 18px 20px;
-            margin-bottom: 14px;
-            border: 1px solid #f0f0f0;
-        }
-        .feature-card h3 {
-            font-size: 16px;
-            margin-bottom: 6px;
-            color: #1976d2;
-            font-weight: 600;
-        }
-        .highlight {
-            background: #e3f2fd;
-            color: #1565c0;
-            padding: 16px 20px;
-            border-radius: 10px;
-            margin: 20px 0;
+
+        .badge {
+            background: rgba(255,255,255,0.2);
+            backdrop-filter: blur(10px);
+            padding: 8px 18px;
+            border-radius: 999px;
+            font-size: 14px;
             font-weight: 500;
-            text-align: center;
         }
-        .link-group {
-            margin-top: 24px;
-            padding-top: 20px;
-            border-top: 1px solid #eee;
-            text-align: center;
+
+        .download-btn {
+            display: inline-block;
+            background: #000;
+            color: white;
+            padding: 14px 32px;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
-        .link-group a {
-            color: #1976d2;
+
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        /* Container */
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Section */
+        section {
+            padding: 70px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #0f172a;
+        }
+
+        .section-desc {
+            text-align: center;
+            color: #64748b;
+            font-size: 16px;
+            margin-bottom: 48px;
+            max-width: 560px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 32px 28px;
+            border-radius: 16px;
+            box-shadow: 0 2px 12px rgba(15, 23, 42, 0.06);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+            border: 1px solid #f1f5f9;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(15, 23, 42, 0.1);
+        }
+
+        .feature-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, #e0e7ff, #c7d2fe);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #0f172a;
+        }
+
+        .feature-card p {
+            font-size: 15px;
+            color: #64748b;
+            line-height: 1.6;
+        }
+
+        /* Privacy Highlight */
+        .privacy-section {
+            background: #0f172a;
+            color: white;
+        }
+
+        .privacy-section .section-title { color: white; }
+        .privacy-section .section-desc { color: #94a3b8; }
+
+        .privacy-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+        }
+
+        .privacy-item {
+            background: rgba(255,255,255,0.05);
+            padding: 24px;
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .privacy-item h4 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .privacy-item p {
+            font-size: 14px;
+            color: #94a3b8;
+        }
+
+        /* Footer */
+        footer {
+            background: #f1f5f9;
+            padding: 32px 20px;
+            text-align: center;
+            color: #64748b;
+            font-size: 14px;
+        }
+
+        .footer-links {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: #475569;
             text-decoration: none;
             margin: 0 12px;
-            font-size: 14px;
+        }
+
+        .footer-links a:hover {
+            color: #1976d2;
+        }
+
+        /* Responsive */
+        @media (max-width: 640px) {
+            .hero h1 { font-size: 36px; }
+            .hero .subtitle { font-size: 17px; }
+            .section-title { font-size: 26px; }
+            section { padding: 50px 0; }
         }
     </style>
 </head>
 <body>
-    <div class="container">
+    <!-- Hero -->
+    <div class="hero">
         <h1>Swiftfeed</h1>
-        <div class="slogan">Privacy-first AI RSS reader & personal knowledge workspace</div>
-
-        <p>Swiftfeed is an all-in-one tool that combines RSS feed reading, AI-assisted content creation, task management and cross-platform publishing. All your data is encrypted and stored locally on your device, with zero remote collection and tracking.</p>
-
-        <div class="highlight">100% local storage · No analytics SDKs · You own all your data</div>
-
-        <h2>Core Features</h2>
-
-        <div class="feature-card">
-            <h3>Multi-source RSS Reader</h3>
-            <p>Subscribe to standard RSS & Atom feeds from blogs, news sites and independent creators. Import and export subscriptions via OPML for seamless migration and backup.</p>
+        <p class="subtitle">Your privacy-first AI RSS reader & personal knowledge workspace</p>
+        <div class="badges">
+            <span class="badge">100% Local Storage</span>
+            <span class="badge">Zero Tracking</span>
+            <span class="badge">Custom AI APIs</span>
         </div>
+        <a href="#" class="download-btn">Download on App Store</a>
+    </div>
 
-        <div class="feature-card">
-            <h3>Custom AI Assistant</h3>
-            <p>Connect your own AI API including OpenAI, Anthropic and Bailian. Generate article summaries, daily digests, writing drafts and creative ideas with full control over your AI provider.</p>
+    <!-- Features -->
+    <section>
+        <div class="container">
+            <h2 class="section-title">Everything you need, all in one place</h2>
+            <p class="section-desc">Read, think, create and manage — all within a single lightweight app, with your data staying fully on your device.</p>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📰</div>
+                    <h3>Multi-source RSS Reader</h3>
+                    <p>Subscribe to standard RSS & Atom feeds from blogs, news sites and independent creators. Import & export via OPML for easy migration.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🤖</div>
+                    <h3>Custom AI Assistant</h3>
+                    <p>Connect OpenAI, Anthropic, Bailian or any custom API. Generate summaries, daily digests, writing drafts and creative ideas on demand.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">✅</div>
+                    <h3>Task & Habit Manager</h3>
+                    <p>Organize todos, subtasks and daily check-ins with local notifications. Set auto-clean cycles to keep your workspace tidy.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📤</div>
+                    <h3>One-Click Publishing</h3>
+                    <p>Draft inside the app and share directly to X, Threads and Instagram. All credentials are encrypted locally on your device.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🔊</div>
+                    <h3>Multi-language TTS</h3>
+                    <p>Listen to articles hands-free with text-to-speech that auto-switches languages. Perfect for commutes and multitasking.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🌍</div>
+                    <h3>4-Language Interface</h3>
+                    <p>Native UI in English, Simplified Chinese, Japanese and French. Switch instantly to match your preferred language.</p>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <div class="feature-card">
-            <h3>Task & Habit Management</h3>
-            <p>Organize todos, subtasks and daily check-ins with local notifications. Set auto-clean cycles from 7 to 180 days to automatically clear old content and save storage.</p>
+    <!-- Privacy -->
+    <section class="privacy-section">
+        <div class="container">
+            <h2 class="section-title">Built with privacy at its core</h2>
+            <p class="section-desc">We believe your data belongs to you — and only you.</p>
+
+            <div class="privacy-list">
+                <div class="privacy-item">
+                    <h4>No remote data upload</h4>
+                    <p>All feeds, chats and tasks stay on your device. We never send your personal data to any server.</p>
+                </div>
+                <div class="privacy-item">
+                    <h4>Zero tracking SDKs</h4>
+                    <p>No analytics, no crash reports, no ad tracking. Nothing watches what you read or do inside the app.</p>
+                </div>
+                <div class="privacy-item">
+                    <h4>System-level encryption</h4>
+                    <p>All data is stored inside the iOS sandbox with native encryption, protected by your device passcode.</p>
+                </div>
+                <div class="privacy-item">
+                    <h4>Full data control</h4>
+                    <p>One tap to erase everything. Uninstalling the app permanently wipes all local data with no residual copies.</p>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <div class="feature-card">
-            <h3>One-Click Social Publishing</h3>
-            <p>Draft content inside the app and share directly to X, Threads and Instagram. All login credentials are encrypted locally and never sent to developer servers.</p>
-        </div>
-
-        <div class="feature-card">
-            <h3>Multi-language TTS & Interface</h3>
-            <p>Listen to articles hands-free with auto-switching text-to-speech. Native UI available in English, Simplified Chinese, Japanese and French.</p>
-        </div>
-
-        <h2>Built for Privacy</h2>
-        <ul>
-            <li>No user data, device IDs or reading records are uploaded to any server</li>
-            <li>No integrated analytics, crash tracking or ad tracking SDKs</li>
-            <li>All data stored inside the iOS sandbox with system-level encryption</li>
-            <li>One-tap full data wipe; uninstalling permanently erases all local data</li>
-        </ul>
-
-        <div class="link-group">
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
             <a href="privacy-en.html">Privacy Policy</a>
             <a href="support-en.html">Support</a>
         </div>
-    </div>
+        <p>© 2026 Swiftfeed. All rights reserved.</p>
+    </footer>
 </body>
 </html>
