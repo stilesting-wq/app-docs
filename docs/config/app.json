@@ -19,9 +19,10 @@
   },
   "defaultSubscription": {
     "defaultSubscriptionNames": [
-      "酷壳",
-      "Stiles",
-      "阮一峰的网络日志"
+        "OpenAI Official Blog",
+        "GitHub Blog",
+        "Hacker News Frontpage",
+        "Hacker News Best"
     ]
   },
   "defaultAgent": {
