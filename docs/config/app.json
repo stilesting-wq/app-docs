@@ -33,12 +33,17 @@
     "defaultAgentAPIKey": "n/cLLRswB6H+qBN7TCEL2vFDicnzHv4patH2xTt/l1NPb9pBYjqIDp3oIgS7f5q7hDO341kSJjXCcSMQJ16WXngv2L93FDjueMZ8isO4viulQsldoay/7VCUhi0BtQZzXNOriaoRd/tP5giE88torITV39RLPVQcbRUj1nblVZ4=",
     "defaultAgentModels": [
       "qwen3.7-plus",
+      "qwen3.7-max-2026-05-17",
+      "qwen3.7-plus-2026-05-26",
       "qwen-max",
       "qwen3.6-plus",
       "qwen3.6-flash",
       "qwen-long",
-      "glm-5",
-      "qwen-plus-2025-07-28"
+      "glm-5.2",
+      "qwen-plus-2025-07-28",
+      "qwen3.5-omni-plus-2026-03-15",
+      "qwen3-omni-flash-realtime-2025-09-15",
+      "qwen-omni-turbo-realtime-2025-05-08"
     ],
     "defaultAgentDailyCallLimit": 100
   },
