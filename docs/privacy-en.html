@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Swiftfeed Privacy Policy</title>
+    <title>Swiftfeed - Privacy Policy</title>
     <style>
         * {
             margin: 0;
@@ -14,66 +14,110 @@
         body {
             background-color: #f5f7fa;
             color: #222;
-            line-height: 1.8;
-            padding: 24px 16px;
+            line-height: 1.7;
+            padding: 20px 16px;
         }
         .container {
             max-width: 800px;
             margin: 0 auto;
             background: #ffffff;
-            padding: 40px 32px;
+            padding: 32px;
             border-radius: 16px;
             box-shadow: 0 2px 12px rgba(0,0,0,0.06);
         }
         h1 {
-            font-size: 28px;
+            font-size: 26px;
             text-align: center;
-            margin-bottom: 10px;
-            color: #111111;
-            font-weight: 600;
+            margin-bottom: 8px;
+            color: #1a1a1a;
         }
         .update-date {
             text-align: center;
-            color: #666666;
+            color: #666;
             font-size: 14px;
-            margin-bottom: 36px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid #eeeeee;
+            margin-bottom: 32px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #eee;
         }
         h2 {
-            font-size: 20px;
-            margin: 32px 0 16px;
-            color: #1a1a1a;
-            font-weight: 600;
+            font-size: 18px;
+            margin: 28px 0 12px;
+            color: #111;
         }
         p {
-            margin-bottom: 16px;
+            margin-bottom: 14px;
             font-size: 15px;
-            color: #333333;
+            color: #333;
         }
         ul {
-            margin: 12px 0 18px 28px;
+            margin: 10px 0 16px 24px;
         }
         li {
-            margin-bottom: 10px;
+            margin-bottom: 8px;
             font-size: 15px;
-            color: #333333;
-            line-height: 1.7;
         }
-        .sub-section {
+        .sub-title {
             font-weight: 600;
-            margin-top: 18px;
-            display: inline-block;
-            font-size: 16px;
-            color: #222222;
+            margin-top: 16px;
+            display: block;
         }
         .contact {
             margin-top: 12px;
             word-break: break-all;
+        }
+        .nutrition-label {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 16px;
+            margin: 12px 0 16px;
+            background: #fafafa;
+        }
+        .nutrition-label table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .nutrition-label th,
+        .nutrition-label td {
+            text-align: left;
+            padding: 8px 12px;
+            border-bottom: 1px solid #eee;
+            font-size: 14px;
+        }
+        .nutrition-label th {
+            color: #555;
+            font-weight: 500;
+            width: 45%;
+        }
+        .nutrition-label td {
+            color: #222;
+        }
+        .nutrition-label tr:last-child th,
+        .nutrition-label tr:last-child td {
+            border-bottom: none;
+        }
+        .badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 12px;
             font-weight: 500;
         }
-        strong {
-            color: #111111;
+        .badge-none {
+            background: #e8f5e9;
+            color: #2e7d32;
+        }
+        .badge-user {
+            background: #e3f2fd;
+            color: #1565c0;
+        }
+        .lang-switch {
+            text-align: center;
+            margin-bottom: 16px;
+        }
+        .lang-switch a {
+            color: #1976d2;
+            text-decoration: none;
+            font-size: 14px;
         }
     </style>
 </head>
@@ -81,66 +125,144 @@
     <div class="container">
         <h1>Swiftfeed Privacy Policy</h1>
         <div class="update-date">Last Updated: June 2026</div>
+        <div class="lang-switch">
+            <a href="privacy.html">阅读中文版</a>
+        </div>
 
-        <p>Swiftfeed ("the App") is developed and operated by an individual developer. We take user privacy extremely seriously. This privacy policy clearly and transparently explains how we handle your data when you use our application.</p>
+        <p>Swiftfeed (hereinafter referred to as "this app") is developed and operated by an individual developer. We deeply value your privacy. This policy transparently explains how we handle your data.</p>
 
         <h2>1. Data Collection</h2>
-        <p>Swiftfeed does <strong>not</strong> collect, upload, or store any personally identifiable information (PII) from users. The App does not integrate any third-party analytics, crash reporting, or advertising tracking SDKs. No user behavior data is collected or shared in the background.</p>
+        <p>This app does not collect, upload, or store any personal identifiable information. We do not use any third-party analytics, crash reporting, or advertising tracking SDKs.</p>
 
-        <h2>2. Locally Stored Data</h2>
-        <p>All data generated and used by the App is stored <strong>locally on your device only</strong>. The developer has no access to any of your data. Local data includes:</p>
+        <h2>2. Data Stored Locally</h2>
+        <p>All your data is stored locally on your device, including:</p>
         <ul>
-            <li>RSS feed configurations and fetched article content</li>
-            <li>AI chat history and conversation messages</li>
-            <li>Task management data, including to-do items, check-in records, and timelines</li>
-            <li>Saved articles and custom categories</li>
-            <li>App preferences and settings (display language, data retention period, etc.)</li>
-            <li>Post records and local drafts</li>
+            <li>RSS subscription configurations and fetched article content</li>
+            <li>AI conversation history and messages</li>
+            <li>Task management data (tasks, check-in records, timelines)</li>
+            <li>Bookmarked articles and categories</li>
+            <li>App settings and preferences (language, retention period, etc.)</li>
+            <li>Publishing records and drafts</li>
         </ul>
-        <p>All aforementioned data remains solely on your device. You may delete all local app data at any time within the App settings.</p>
+        <p>The above data is kept solely on your device and is inaccessible to the developer. You can delete all data at any time within the app.</p>
 
-        <h2>3. Third-Party Services &amp; Data Transmission</h2>
-        <p>Data will only be transmitted to third-party services when you <strong>actively initiate and authorize</strong> the corresponding features. No data is transmitted automatically in the background.</p>
-
-        <p><span class="sub-section">3.1 AI Chat</span><br/>
-        Your chat content will be sent to the AI service provider you manually configure for processing. The App integrates Alibaba Cloud Bailian API by default. You may also manually connect third-party providers including OpenAI and Anthropic. All third-party service usage is subject to the respective provider’s official privacy policy.</p>
-
-        <p><span class="sub-section">3.2 RSS Subscription</span><br/>
-        The App retrieves subscribed content via standard RSS/Atom protocols. Certain social media feeds are fetched through your self-hosted RSSHub instance. During standard network communication, your device IP address may be logged by the target server, which is a normal Internet communication behavior beyond our control.</p>
-
-        <p><span class="sub-section">3.3 Content Publishing</span><br/>
-        When you publish content to social platforms such as X (Twitter), data is transmitted through the official platform API. If you authorize your X account, the OAuth token is stored only on your local device and never uploaded to any server.</p>
-
-        <p><span class="sub-section">3.4 Remote Configuration</span><br/>
-        On startup, the App fetches a lightweight JSON configuration file from the developer’s server to update default feed recommendations and app-level configurations. This request carries no personal user data, device identifiers, or private information.</p>
-
-        <h2>4. Device Permissions</h2>
-        <p>All permissions requested by the App are strictly for functional purposes and will not be used for data collection or tracking:</p>
+        <h2>3. Data Retention & Deletion</h2>
+        <p>You can customize the content retention period (7 to 180 days) in the app settings. Content exceeding the retention period will be automatically cleared. You can also manually delete all data at any time using the "Clear All Records" feature.</p>
         <ul>
-            <li><strong>Microphone</strong>: Used exclusively for voice input. Voice recognition is processed locally via Apple’s Speech framework. No voice data is uploaded externally.</li>
-            <li><strong>Notifications</strong>: Used for local task reminders and daily digest alerts. All notifications are processed on-device without third-party push servers.</li>
-            <li><strong>Photo Library</strong>: Used for selecting images in AI conversations via Apple’s PhotosPicker. The App only accesses the images you explicitly select.</li>
+            <li>Uninstalling the app will automatically erase all app data on your device</li>
+            <li>The developer cannot remotely access, recover, or retain any of your data</li>
         </ul>
 
-        <h2>5. On-Device Speech Recognition</h2>
-        <p>The voice input feature utilizes Apple’s native Speech framework. All voice data is processed locally on your device and is not uploaded to any external server. Apple may receive anonymized voice fragments during recognition processing, governed by Apple’s official privacy policy.</p>
+        <h2>4. Third-Party Services & Data Transmission</h2>
+        <p>When you actively use the following features, relevant data will be sent to the corresponding third-party services:</p>
 
-        <h2>6. Data Security</h2>
+        <p><span class="sub-title">1. AI Conversations</span>
+        Your conversation input is sent to the AI service provider you have configured for processing. This app integrates with Bailian (Alibaba Cloud) API by default, but you may also configure OpenAI, Anthropic, or other third-party services. Data will be processed according to each provider's privacy policy. Please refer to their official websites for details.</p>
+
+        <p><span class="sub-title">2. RSS Subscriptions</span>
+        This app fetches content you subscribe to via standard RSS/Atom protocols. During this process, your device's IP address may be logged by target servers, which is standard internet communication behavior.</p>
+
+        <p><span class="sub-title">3. Content Publishing</span>
+        When publishing to social platforms (such as X/Twitter, Threads, etc.), content is sent via the respective platform APIs. Publishing credentials are stored only on your device and are inaccessible to the developer.</p>
+
+        <p><span class="sub-title">4. Remote Configuration</span>
+        Upon startup, this app fetches a lightweight configuration file (JSON) from the developer's server to update default recommended sources and other app-level settings. This request does not carry any personal information or device identifiers.</p>
+
+        <h2>5. Device Permissions</h2>
+        <p>This app may request the following device permissions, all used solely for specific features and never for data collection:</p>
         <ul>
-            <li>All local data is encrypted via system-level sandbox encryption on iOS devices.</li>
-            <li>The developer has no ability to remotely access, read, modify, or retrieve your local data.</li>
-            <li>We will never sell, rent, share, or transfer your user data to any third parties for commercial or non-commercial purposes.</li>
-            <li>All app data will be permanently cleared once you uninstall the application from your device.</li>
+            <li><strong>Microphone</strong>: Used for voice input (processed via Apple's on-device Speech framework; voice data never leaves your device)</li>
+            <li><strong>Notifications</strong>: Used for task reminders and daily digest alerts (local notifications only; no push notification servers involved)</li>
+            <li><strong>Photo Library</strong>: Used for selecting images in conversations or saving generated images (via system PhotosPicker; the app only accesses content you explicitly select)</li>
         </ul>
 
-        <h2>7. Children’s Privacy</h2>
-        <p>The App does not knowingly collect personal information from any users, including children under the age of 13. If you are a parent or guardian and believe your child has provided personal information through our App, please contact us promptly so we can handle relevant inquiries.</p>
+        <h2>6. Speech Recognition</h2>
+        <p>The voice input feature uses Apple's Speech framework. Voice data is processed on-device and is never uploaded to any server. Apple may receive anonymized voice fragments when processing speech recognition requests. For details, please refer to <a href="https://www.apple.com/legal/privacy/" target="_blank">Apple's Privacy Policy</a>.</p>
 
-        <h2>8. Policy Updates</h2>
-        <p>We reserve the right to update this privacy policy periodically. Revised terms will be posted within the App. Material changes will be notified via in-app announcements or update logs. Your continued use of the App after policy updates constitutes your acceptance of the revised Privacy Policy.</p>
+        <h2>7. Data Security</h2>
+        <ul>
+            <li>All data is encrypted using iOS system-level encryption and stored within the app sandbox</li>
+            <li>The developer cannot remotely access, read, or modify any of your data</li>
+            <li>We will never sell, share, or transmit your personal data to any third party</li>
+            <li>Uninstalling the app will automatically erase all app data on your device</li>
+        </ul>
 
-        <h2>9. Contact Information</h2>
-        <p>If you have any questions, concerns, or suggestions regarding this Privacy Policy or our data privacy practices, please contact the developer via email:</p>
+        <h2>8. Your Rights</h2>
+        <p>Since your data is stored entirely on your device, you have complete control over your data:</p>
+        <ul>
+            <li><strong>Right of Access</strong>: You can view all stored data within the app at any time</li>
+            <li><strong>Right to Erasure</strong>: You can permanently delete all data via the "Clear All Records" feature or by uninstalling the app</li>
+            <li><strong>Right to Data Portability</strong>: You can export your subscription data in OPML format</li>
+            <li><strong>Right to Withdraw Consent</strong>: You can revoke system permissions (e.g., microphone) at any time</li>
+        </ul>
+        <p>Under applicable data protection laws (including but not limited to the EU GDPR, UK GDPR, and California CCPA/CPRA), please contact the developer using the information below if you have any questions about this policy or data processing.</p>
+
+        <h2>9. International Data Transfers</h2>
+        <p>When you use AI conversation or content publishing features, data may be transmitted to the region where your configured servers are located (e.g., mainland China, United States, etc.). This is entirely chosen and controlled by you; this app does not automatically transfer data to any region.</p>
+
+        <h2>10. Children's Privacy</h2>
+        <p>This app does not knowingly collect personal information from any user, including children under the age of 13 (or the applicable minimum age in your jurisdiction). If you are a parent or guardian and discover that your child has provided personal information without consent, please contact us, and we will promptly delete the relevant data.</p>
+
+        <h2>11. Changes to This Policy</h2>
+        <p>We may update this Privacy Policy from time to time. Updated policies will be published within the app. Material changes will be communicated via in-app notification and the "Last Updated" date will be revised. We encourage you to review this policy periodically. Continued use of the app constitutes acceptance of the updated policy.</p>
+
+        <h2>12. Apple Privacy Nutrition Label</h2>
+        <p>The following corresponds to the Apple App Store Privacy Nutrition Label:</p>
+        <div class="nutrition-label">
+            <table>
+                <tr>
+                    <th>Data Type</th>
+                    <th>Collected?</th>
+                </tr>
+                <tr>
+                    <td>Contact Information (name, email, etc.)</td>
+                    <td><span class="badge badge-none">Not Collected</span></td>
+                </tr>
+                <tr>
+                    <td>Health & Fitness Data</td>
+                    <td><span class="badge badge-none">Not Collected</span></td>
+                </tr>
+                <tr>
+                    <td>Financial Information</td>
+                    <td><span class="badge badge-none">Not Collected</span></td>
+                </tr>
+                <tr>
+                    <td>Location</td>
+                    <td><span class="badge badge-none">Not Collected</span></td>
+                </tr>
+                <tr>
+                    <td>Sensitive Information</td>
+                    <td><span class="badge badge-none">Not Collected</span></td>
+                </tr>
+                <tr>
+                    <td>User Content (conversations, articles, etc.)</td>
+                    <td><span class="badge badge-user">Stored on device only</span></td>
+                </tr>
+                <tr>
+                    <td>Browsing History</td>
+                    <td><span class="badge badge-none">Not Collected</span></td>
+                </tr>
+                <tr>
+                    <td>Search History</td>
+                    <td><span class="badge badge-none">Not Collected</span></td>
+                </tr>
+                <tr>
+                    <td>Identifiers (device ID, etc.)</td>
+                    <td><span class="badge badge-none">Not Collected</span></td>
+                </tr>
+                <tr>
+                    <td>Purchases</td>
+                    <td><span class="badge badge-none">Not Collected</span></td>
+                </tr>
+                <tr>
+                    <td>Usage Data / Diagnostics</td>
+                    <td><span class="badge badge-none">Not Collected</span></td>
+                </tr>
+            </table>
+        </div>
+
+        <h2>13. Contact Us</h2>
+        <p>If you have any questions about this Privacy Policy or data processing, please contact the developer at:</p>
         <p class="contact">Email: stilesting@gmail.com</p>
     </div>
 </body>
