@@ -41,10 +41,7 @@
       "qwen3.6-flash",
       "qwen-long",
       "glm-5.2",
-      "qwen-plus-2025-07-28",
-      "qwen3.5-omni-plus-2026-03-15",
-      "qwen3-omni-flash-realtime-2025-09-15",
-      "qwen-omni-turbo-realtime-2025-05-08"
+      "qwen-plus-2025-07-28"
     ],
     "defaultAgentDailyCallLimit": 100
   },
